@@ -114,7 +114,7 @@ export default function Home() {
             const bizCat = mapToBizData(cat);
             try {
               const res = await fetch(
-                `https://bizdata-web.vercel.app/api/businesses?location=${latitude},${longitude}&category=${bizCat}&radius_km=2&limit=8`
+                `https://bizdata-web.vercel.app/api/businesses?location=${latitude},${longitude}&category=${bizCat}&radius_km=10&limit=8`
               );
               const data = await res.json();
               if (data.businesses) {
